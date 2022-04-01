@@ -6,7 +6,7 @@ import vercel from '../public/vercel.svg'
 
 const Layout: NextComponentType = ({children}) => {
   return (
-      <div className="container mx-auto text-center">
+      <div className="container mx-auto text-center max-w-5xl pt-6">
         <Image src={vercel} alt="logo" width={300} height={100}></Image>
         <Nav/>
         <main>{children}</main>
