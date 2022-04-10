@@ -5,17 +5,22 @@ import { useUser } from "@auth0/nextjs-auth0"
 const Nav: NextComponentType = () => {
   const {user} = useUser()
 
+  const titles = ["Blog", "Contact", "DevLog"]
+
   return (
     <header className="flex flex-wrap gap-4 justify-center mx-2 my-2 pb-4 pt-2 border-b-2">
       <div className="px-2 border-2 rounded-md w-40 hover:text-yellow-500">
         <Link href="/"><a>Home</a></Link>
       </div>
-      <div className="px-2 border-2 rounded-md w-40 hover:text-yellow-500">
-        <Link href="/blog"><a>Blog</a></Link>
-      </div>
-      <div className="px-2 border-2 rounded-md w-40 hover:text-yellow-500">
-        <Link href="/contact"><a>Contact</a></Link>
-      </div>
+      
+      {titles.map(title => {
+        return (
+          <div key={title} className="px-2 border-2 rounded-md w-40 hover:text-yellow-500">
+            <Link href={title.toLowerCase()}><a>{title}</a></Link>
+          </div>
+        )
+      })}
+      
       {user
         ?
         <div>
