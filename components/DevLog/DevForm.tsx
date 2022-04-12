@@ -7,6 +7,7 @@ const DevForm = () => {
   const handleSubmit = async (event: any) => {
     event.preventDefault()
     console.log(text)
+    
   }
 
   return (

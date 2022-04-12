@@ -4,7 +4,7 @@ const MenuBar = ({editor}: any) => {
   }
 
   return (
-    <div className="flex flex-wrap justify-center">
+    <div className="flex flex-wrap justify-center py-2 mt-6">
       <button
         onClick={() => editor.chain().focus().toggleBold().run()}
         className={editor.isActive('bold') ? 'font-semibold text-yellow-500 border rounded-md p-1 m-1' : 'border rounded-md p-1 m-1'}
