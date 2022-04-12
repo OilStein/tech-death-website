@@ -1,6 +1,6 @@
 const DevPost = () => {
   return (
-    <div>
+    <div className="">
       
     </div>
   )

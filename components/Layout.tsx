@@ -4,10 +4,10 @@ import Footer from "./Footer"
 
 const Layout: NextComponentType = ({children}) => {
   return (
-    <div className=" text-white font-mono bg-gradient-to-b from-gray-900 to-gray-800 h-screen w-screen">
+    <div className=" text-white font-mono bg-zinc-900">
       <div className="container mx-auto text-center max-w-5xl pt-6">
         <Nav/>
-          <main>{children}</main>
+          <main className="">{children}</main>
         <Footer/>
       </div>
     </div>

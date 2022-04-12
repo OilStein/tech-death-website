@@ -6,14 +6,14 @@ const DevLog = () => {
   const [form, showForm] = useState(true)
 
   return (
-    <div>
+    <div className="container bg-zinc-800 rounded-xl h-screen">
       <button onClick={() => form ? showForm(false) : showForm(true)} >
         <h1 className="text-5xl pt-2 hover:text-yellow-600">DevLog</h1>
       </button>
-      <div>
-        {form ? <DevForm/> : <></> }
-        <DevPost/>
-      </div>
+      
+      {form ? <DevForm/> : <></> }
+      <DevPost/>
+      
     </div>
   )
 }
