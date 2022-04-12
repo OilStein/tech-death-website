@@ -3,8 +3,8 @@ import Link from "next/link"
 
 const Footer: NextComponentType = () => {
   return (
-    <footer className="m-2 p-2 fixed bottom-0">
-      <div className="flex gap-4">
+    <footer className="mt-2 p-2 mr-6 bottom-0 absolute">
+      <div className="flex justify-end space-x-4">
         <div className="mr-4">
           <Link href="/about"><a className="hover:underline hover:text-yellow-500">About</a></Link>
         </div>

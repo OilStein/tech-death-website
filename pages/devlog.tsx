@@ -1,13 +1,9 @@
-import Tiptap from "../components/TipTap/TipTap"
+import { useState } from "react"
+import DevLog from "../components/DevLog/DevLog"
 
 const devlog = () => {
-  return ( 
-    <div>
-      <h1 className="text-5xl pt-2">DevLog</h1>
-      <div>
-        <Tiptap/>
-      </div>
-    </div>
+  return (  
+    <DevLog></DevLog>
   )
 }
 

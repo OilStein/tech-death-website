@@ -16,7 +16,7 @@ const Nav: NextComponentType = () => {
       {titles.map(title => {
         return (
           <div key={title} className="px-2 border-2 rounded-md w-40 hover:text-yellow-500">
-            <Link href={title.toLowerCase()}><a>{title}</a></Link>
+            <Link href={"/"+title.toLowerCase()}><a>{title}</a></Link>
           </div>
         )
       })}
