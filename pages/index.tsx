@@ -1,14 +1,20 @@
-import type { NextPage } from 'next'
+import type { NextPage } from "next";
+import Opening from "../components/Opening";
+import Head from "next/head";
+import AboutMe from "../components/About"
 
 const Home: NextPage = () => {
   return (
-    <div>
-      <h1>Hello</h1>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur dignissimos adipisci placeat perspiciatis, hic repellat mollitia blanditiis harum ab vitae velit repudiandae cumque voluptates maxime nemo ratione aspernatur? Quo, ipsam.
-      </p>
+    <div className="">
+      <Head>
+        <title>Home</title>
+        <meta name="description" content="Homepage"/>
+        <link rel="icon" href="favicon.ico"/>
+      </Head>
+      <Opening />
+      <AboutMe />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
