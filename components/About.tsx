@@ -28,7 +28,7 @@ const AboutMe: React.FC = () => {
     },
     {
       name: "Java",
-      logo: "java",
+      logo: "java.svg",
       level: 3,
       link: "https://www.java.com/",
       description:
@@ -93,7 +93,20 @@ const AboutMe: React.FC = () => {
       </div>
       <div className="container mx-auto text-center px-11 mt-28">
         <h2>My skillset</h2>
-        <div className="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-20"></div>
+        <div className="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-20">
+          {skills.map((skill) => {
+            return (
+              <Skill
+                key={skill.name}
+                name={skill.name}
+                logo={skill.logo}
+                level={skill.level}
+                link={skill.link}
+                description={skill.description}
+              />
+            );
+          })}
+        </div>
       </div>
     </section>
   );

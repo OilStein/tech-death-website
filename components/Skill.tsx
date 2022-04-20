@@ -21,10 +21,10 @@ const Skill: React.FC<Props> = ({ logo, name, level, link, description }) => {
   return (
     <div className="flex">
       <Image
-        src={`/public/assets/logos/${logo}`}
+        src={`/assets/logos/${logo}`}
         width={25}
         height={25}
-        alt={name}
+        alt={name.charAt(0)}
       />
       <div>
         <h3>{name}</h3>
@@ -32,13 +32,13 @@ const Skill: React.FC<Props> = ({ logo, name, level, link, description }) => {
       </div>
       {open ? (
         <div>
-          <p>{description}{link}</p>
+          <p>{description}</p>
         </div>
       ) : (
         <></>
       )}
       <div>
-        <button onClick={handle}>open</button>
+        <button onClick={handle}></button>
       </div>
     </div>
   );
