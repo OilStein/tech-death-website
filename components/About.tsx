@@ -94,7 +94,7 @@ const AboutMe: React.FC = () => {
       <div className="container mx-auto text-center px-11 mt-28">
         <h2>My skillset</h2>
         <div className="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-20">
-          {skills.map((skill) => {
+          {skills.sort((a, b) => b.level - a.level).map((skill) => {
             return (
               <Skill
                 key={skill.name}

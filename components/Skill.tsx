@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import Rating from '../components/Rating'
+import Rating from "../components/Rating";
 
 interface Props {
   logo: string;
@@ -16,19 +16,23 @@ const Skill: React.FC<Props> = ({ logo, name, level, link, description }) => {
 
   const handle = () => {
     open ? setOpen(false) : setOpen(true);
-  }
+  };
 
   return (
-    <div className="flex">
-      <Image
-        src={`/assets/logos/${logo}`}
-        width={25}
-        height={25}
-        alt={name.charAt(0)}
-      />
-      <div>
-        <h3>{name}</h3>
-        <Rating level={level}/>
+    <div className="flex border-2">
+      <div className="h-20 w-20 border-r-2 p-2">
+        <Image
+          src={`/assets/logos/${logo}`}
+          width={100}
+          height={100}
+          alt={name.charAt(0)}
+        />
+      </div>
+      <div className="mx-auto my-auto">
+        <h3 className="">{name}</h3>
+        <div>
+          <Rating level={level} />
+        </div>
       </div>
       {open ? (
         <div>
