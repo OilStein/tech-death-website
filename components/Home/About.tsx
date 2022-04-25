@@ -80,10 +80,18 @@ const AboutMe: React.FC = () => {
       description:
         "I have done few games with C# and Unity. C# with Godot is also familiar",
     },
+    {
+      name: "TypeScript",
+      logo: "typescript.svg",
+      level: 2,
+      link: "",
+      description: "",
+
+    },
   ];
 
   return (
-    <section className="flex flex-col bg-zinc-700 py-20 text-3xl md:text-4xl">
+    <section className="flex flex-col bg-zinc-800 py-20 text-3xl md:text-4xl">
       <div className="container mx-auto px-11">
         <p className="leading-tight max-w-5xl mx-auto text-4xl tracking-tight text-center">
           <strong>{"Death will consume us all. It's evitable! "}</strong>
@@ -93,7 +101,7 @@ const AboutMe: React.FC = () => {
       </div>
       <div className="container mx-auto text-center px-11 mt-28">
         <h2>My skillset</h2>
-        <div className="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-20">
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-20">
           {skills.sort((a, b) => b.level - a.level).map((skill) => {
             return (
               <Skill

@@ -1,6 +1,6 @@
 import React from "react";
-import Skull from "../public/assets/svg/skull.svg";
-import Arrow from '../public/assets/svg/arrow.svg';
+import Skull from "../../public/assets/svg/skull.svg";
+import Arrow from '../../public/assets/svg/arrow.svg';
 
 const Opening: React.FC = () => {
   return (

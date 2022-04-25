@@ -1,4 +1,4 @@
-import Skull from "../public/assets/svg/skull.svg";
+import Skull from "../../public/assets/svg/skull.svg";
 
 interface Props {
   level: number;

@@ -8,14 +8,11 @@ const connect = async () => {
   }
 };
 
-class Skill extends Entity {}
+class Blog extends Entity {}
 
-let schema = new Schema(Skill, {
-  name: { type: "string" },
-  logo: { type: "string" },
-  level: { type: "number" },
-  link: { type: "string" },
-  description: { type: "string" },
+let schema = new Schema(Blog, {
+  title: { type: "string" },
+  text: { type: "string" },
 },
 {
   dataStructure: 'JSON'
@@ -23,20 +20,18 @@ let schema = new Schema(Skill, {
 
 interface Props {
   data: {
-    name: string,
-    logo: string,
-    level: number,
-    link: string,
-    description: number
+    title: string,
+    text: string
   }
 }
 
-export const createSkill = async (data: any) => {
+export const createBlog = async (data: any) => {
+  console.log(typeof data);
   await connect()
   // @ts-ignore
   const repository = client.fetchRepository(schema)
-  const skill = repository.createEntity(data);
-  const id = await repository.save(skill);
+  const blog = repository.createEntity(data);
+  const id = await repository.save(blog);
   return id;
 
 }
@@ -49,13 +44,13 @@ export const createIndex = async () => {
   await repository.createIndex()
 }
  
-export const getAllSkills = async () => {
+export const getAllBlogs = async () => {
   await connect()
 
   // @ts-ignore
   const repository = new Repository(schema, client)
 
-  const skills = await repository.search().return.all()
+  const blogs = await repository.search().return.all()
 
-  return skills
+  return blogs
 }

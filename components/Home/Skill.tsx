@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import Rating from "../components/Rating";
+import Rating from "./Rating";
 
 interface Props {
   logo: string;
